@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Square.unity
+    guid: 3b46470342f13fc41a6cdc6247d5e23a
+  - enabled: 1
+    path: Assets/Scenes/Cube.unity
+    guid: 7a48d3c59b2246540ba5a55cfe79a99e
+  - enabled: 1
+    path: Assets/Scenes/Coloring.unity
+    guid: 339da05706d3a794bbac22221d773bdc
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: 357ed164d13c43243abe949c1e4c0203
+  - enabled: 1
+    path: Assets/Scenes/Find.unity
+    guid: d64324117a5897f449be9ed198e4bccc
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0
