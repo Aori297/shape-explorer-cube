@@ -21,6 +21,9 @@ public class DragArrow : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     BranchManager bm;
 
+
+    [SerializeField] TeacherDialoige td;
+
     void Start()
     {
         //  lineRenderer = GetComponent<LineRenderer>();
@@ -92,7 +95,7 @@ public class DragArrow : MonoBehaviour
                         if (!hasBranch)
                         {
                             Debug.Log("Complete");
-                            SceneManager.LoadScene("Cube");
+                            td.nextDialogue();
                         }
                         else
                         {

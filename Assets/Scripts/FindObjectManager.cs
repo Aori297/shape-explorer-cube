@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class FindObjectManager : MonoBehaviour
 {
-    private PolygonCollider2D polygonCollider;
+    private BoxCollider2D booxCollider;
     [SerializeField] private GameObject completedScreen;
 
     private void Awake()
     {
-        polygonCollider = GetComponent<PolygonCollider2D>();
+        booxCollider = GetComponent<BoxCollider2D>();
 
-        if(polygonCollider == null)
+        if(booxCollider == null)
         {
             Debug.Log("No PolygonCollider2D found");
         }
@@ -20,7 +20,7 @@ public class FindObjectManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0)){
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if (polygonCollider.OverlapPoint(mousePosition))
+            if (booxCollider.OverlapPoint(mousePosition))
             {
                 completedScreen.SetActive(true);
                 Debug.Log("Completed");

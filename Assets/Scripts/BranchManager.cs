@@ -11,6 +11,7 @@ public class BranchManager : MonoBehaviour
     [SerializeField] SpriteRenderer[] fillSprites;
     public TextMeshProUGUI branchText;
     int currentBranchIndex = 0;
+    [SerializeField] TeacherDialoige td;
 
     private void Awake()
     {
@@ -27,29 +28,13 @@ public class BranchManager : MonoBehaviour
         if (currentBranchIndex >= branchGOs.Length)
         {
             Debug.Log("Complete");
-            SceneManager.LoadScene("Coloring");
+            td.nextDialogue();
+
+            // SceneManager.LoadScene("Coloring");
             //StartCoroutine(ShowDialogueAndLoadNextScene());
             return;
         }
         branchGOs[currentBranchIndex].SetActive(true);
     }
 
-    //IEnumerator ShowDialogueAndLoadNextScene()
-    //{
-
-    //    yield return new WaitForSeconds(2f); //wait dialogue lai
-
-    //    string currentScene = SceneManager.GetActiveScene().name;
-    //    Debug.Log(currentScene);
-
-    //    if (currentScene == "Square")
-    //    {
-    //        SceneManager.LoadScene("Cube");
-    //        Debug.Log("Change");
-    //    }
-    //    else if (currentScene == "Cube")
-    //    {
-    //        SceneManager.LoadScene("Coloring");
-    //    }
-    //}
 }

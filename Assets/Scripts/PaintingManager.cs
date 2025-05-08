@@ -8,6 +8,8 @@ public class PaintingManager : MonoBehaviour, IPointerClickHandler
     public GameObject paintingToEnable;   // Assign next painting
 
     private PolygonCollider2D polyCollider;
+    [SerializeField] bool isLastClick;
+    [SerializeField] TeacherDialoige td;
 
     private void Awake()
     {
@@ -28,6 +30,12 @@ public class PaintingManager : MonoBehaviour, IPointerClickHandler
         {
             if (paintingToDisable != null) paintingToDisable.SetActive(false);
             if (paintingToEnable != null) paintingToEnable.SetActive(true);
+        }
+
+        if(isLastClick)
+        {
+            Debug.Log("Last click detected");
+            td.nextDialogue();
         }
     }
 }
